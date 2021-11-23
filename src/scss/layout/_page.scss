@@ -63,31 +63,80 @@
     }
     &--title {
         font-family: $typoTitle;
+        font-size: 24px;
         text-transform: capitalize;
         margin-bottom: 15px;
     }
     &--description {
         color: $ColorContrast4;
         font-size: 18px;
-        line-height: 1.67;
+        line-height: 30px;
         margin-bottom: 30px;
     }
     &--button {
-        border-color: $colorPrincipal;
+        border: solid 2px $colorPrincipal;
         width: 76px;
+        height: 45px;
         border-radius: 45px;
         background: none;
-        border-style: solid;
-        &:active, &:focus {
-            border-color: $colorPrincipal;
-            color: $colorPrincipal;
-        }
+        
+        // &:active, &:focus {
+        //     border-color: $colorPrincipal;
+        //     color: $colorPrincipal;
+        // }
 
         &-link {
             color: $colorPrincipal;
             text-decoration: none;
             font-size: 20px;
-            line-height: 1.8;
+            font-weight: 500;
+            line-height: 40px;
+        }
+    }
+}
+
+.main__purchase {
+    background-color: $colorContrast0;
+    padding: 30px 15px 60px;
+    place-items: center;
+    text-align: center;
+    display: grid;
+
+    &--title {
+        font-family: $typoTitle;
+        font-size: 24px;
+        text-transform: capitalize;
+        margin-bottom: 45px;
+    }
+    &--subtitle {
+        font-family: $typoTitle;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    &--description {
+        font-family: $typoText;
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0 55px 45px;
+    }
+    &--button {
+        font-family: $typoText;
+        border: none;
+        width: 184px;
+        height: 45px;
+        border-radius: 45px;
+        background-color: $colorPrincipal;
+        // &:active, &:focus {
+        //     border-color: $colorPrincipal;
+        //     color: $colorPrincipal;
+        // }
+
+        &-link {
+            color: $colorWhite;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 40px;
         }
     }
 }
