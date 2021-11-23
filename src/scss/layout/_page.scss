@@ -51,3 +51,43 @@
     top: 2px;
   }
 }
+
+.main__intro {
+    padding: 30px 15px 45px;
+    &--subtitle, &--description, &--button {
+        font-family: $typoText;
+    }
+    &--subtitle {
+        color: $colorContrast1;
+        line-height: 2.14;
+    }
+    &--title {
+        font-family: $typoTitle;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+    &--description {
+        color: $ColorContrast4;
+        font-size: 18px;
+        line-height: 1.67;
+        margin-bottom: 30px;
+    }
+    &--button {
+        border-color: $colorPrincipal;
+        width: 76px;
+        border-radius: 45px;
+        background: none;
+        border-style: solid;
+        &:active, &:focus {
+            border-color: $colorPrincipal;
+            color: $colorPrincipal;
+        }
+
+        &-link {
+            color: $colorPrincipal;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+    }
+}
