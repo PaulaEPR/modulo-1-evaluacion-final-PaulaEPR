@@ -50,6 +50,11 @@
     position: relative;
     top: 2px;
   }
+  &--shadow {
+    box-shadow: 0 2px 4px 0 $colorBlack50;
+    position: absolute;
+    bottom: -22px;
+  }
 }
 
 .main__intro {
@@ -101,6 +106,7 @@
     place-items: center;
     text-align: center;
     display: grid;
+    position: relative;
 
     &--title {
         font-family: $typoTitle;

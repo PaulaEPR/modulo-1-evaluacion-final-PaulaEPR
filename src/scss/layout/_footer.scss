@@ -1,0 +1,28 @@
+.footer {
+    background-color: $ColorContrast3;
+    font-family: $typoText;
+    color: $colorWhite;
+    font-weight: 300;
+    text-align: center;
+    padding: 60px 15px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__menu {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 30px;
+        &--item {
+            list-style-type: none;
+        }
+    }
+    &__copyright {
+        font-size: 14px;
+        line-height: 30px;
+        &--highlight {
+            color: $colorPrincipal
+        }
+    }
+}
