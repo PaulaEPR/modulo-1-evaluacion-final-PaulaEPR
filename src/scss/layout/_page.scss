@@ -17,6 +17,9 @@
   @media all and (min-width: $tablet) {
     padding: 0 39px 45px;
   }
+  @media all and (min-width: $desktop) {
+    padding: 0 39px 13px;
+  }
 
   &--title,
   &--claim {
@@ -26,13 +29,20 @@
     font-family: $typoTitle;
     text-transform: uppercase;
     font-size: 42px;
+    line-height: 55px;
     margin-bottom: 10px;
     word-spacing: 100vw;
     text-align: center;
 
     @media all and (min-width: $tablet) {
       font-size: 80px;
+      line-height: 106px;
       margin-bottom: 20px;
+    }
+    @media all and (min-width: $desktop) {
+      font-size: 100px;
+      line-height: 132px;
+      margin-bottom: 0;
     }
   }
   &--claim {
@@ -43,6 +53,9 @@
     @media all and (min-width: $tablet) {
       font-size: 24px;
       margin-bottom: 30px;
+    }
+    @media all and (min-width: $tablet) {
+      font-size: 26px;
     }
   }
 }
@@ -64,134 +77,183 @@
   }
   &--shadow {
     box-shadow: 0 2px 4px 0 $colorBlack50;
-    position: absolute;
-    bottom: -22px;
+    position: relative;
+    bottom: -50%;
+    @media all and (min-width: $tablet) {
+      grid-column: span 3;
+    }
   }
 }
 
 .main__intro {
-    padding: 30px 15px 45px;
-    @media all and (min-width: $tablet) {
-      padding: 30px 39px 60px;
-    }
-    &--subtitle, &--description, &--button {
-        font-family: $typoText;
-    }
-    &--subtitle {
-        color: $colorContrast1;
-        font-size: 14px;
-        line-height: 30px;
-    }
-    &--title {
-        font-family: $typoTitle;
-        font-size: 24px;
-        line-height: 30px;
-        text-transform: capitalize;
-        margin-bottom: 15px;
-        @media all and (min-width: $tablet) {
-          font-size: 26px;
-          line-height: 45px;
-          margin-bottom: 30px;
-        }
-    }
-    &--description {
-        color: $ColorContrast4;
-        font-size: 18px;
-        line-height: 30px;
-        margin-bottom: 30px;
-        @media all and (min-width: $tablet) {
-          font-size: 20px;
-          margin-bottom: 30px;
-        }
-    }
-    &--button {
-        border: solid 2px $colorPrincipal;
-        width: 76px;
-        height: 45px;
-        border-radius: 45px;
-        background: none;
-        
-        // &:active, &:focus {
-        //     border-color: $colorPrincipal;
-        //     color: $colorPrincipal;
-        // }
+  padding: 30px 15px 45px;
 
-        &-link {
-            color: $colorPrincipal;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 45px;
-        }
+  @media all and (min-width: $tablet) {
+    padding: 30px 39px 60px;
+  }
+  @media all and (min-width: $desktop) {
+    padding: 60px auto;
+    display: flex;
+    justify-content: center;
+  }
+  &--wrapper {
+    @media all and (min-width: $desktop) {
+      width: 730px;
     }
+  }
+  &--subtitle,
+  &--description,
+  &--button {
+    font-family: $typoText;
+  }
+  &--subtitle {
+    color: $colorContrast1;
+    font-size: 14px;
+    line-height: 30px;
+    @media all and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+  &--title {
+    font-family: $typoTitle;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    @media all and (min-width: $tablet) {
+      font-size: 26px;
+      line-height: 45px;
+      margin-bottom: 30px;
+    }
+    @media all and (min-width: $desktop) {
+      font-size: 32px;
+    }
+  }
+  &--description {
+    color: $ColorContrast4;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    @media all and (min-width: $tablet) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  &--button {
+    border: solid 2px $colorPrincipal;
+    width: 76px;
+    height: 45px;
+    border-radius: 45px;
+    background: none;
+    @media all and (min-width: $tablet) {
+      width: 91px;
+    }
+    @media all and (min-width: $desktop) {
+      width: 160px;
+    }
+
+    // &:active, &:focus {
+    //     border-color: $colorPrincipal;
+    //     color: $colorPrincipal;
+    // }
+
+    &-link {
+      color: $colorPrincipal;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 45px;
+    }
+  }
 }
 
 .main__purchase {
-    background-color: $colorContrast0;
-    padding: 30px 15px 60px;
-    place-items: center;
-    text-align: center;
-    display: grid;
-    position: relative;
+  background-color: $colorContrast0;
+  padding: 30px 15px 0;
+  place-items: center;
+  text-align: center;
+  display: grid;
+  @media all and (min-width: $tablet) {
+    grid-template: 120px 112px 165px 0 / repeat(3, 1fr);
+    padding: 0 24px;
+  }
+  @media all and (min-width: $desktop) {
+    padding: 0 71px;
+  }
+  &--article {
+    align-self: start;
+    &:first-of-type {
+      @media all and (min-width: $desktop) {
+        justify-self: flex-end;
+      }
+    }
+    &:last-of-type {
+      @media all and (min-width: $desktop) {
+        justify-self: flex-start;
+      }
+    }
+  }
+  &--title {
+    font-family: $typoTitle;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: capitalize;
+    margin-bottom: 45px;
     @media all and (min-width: $tablet) {
-      grid-template: 120px 112px 165px / repeat(3, 1fr);
-      padding: 0 24px;
+      grid-column: span 3;
+      margin-top: 30px;
+      font-size: 26px;
+      line-height: 45px;
     }
+    @media all and (min-width: $desktop) {
+      font-size: 32px;
+    }
+  }
+  &--subtitle {
+    font-family: $typoTitle;
+    font-size: 18px;
+    line-height: 30px;
+    @media all and (min-width: $tablet) {
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+  }
+  &--description {
+    font-family: $typoText;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 55px 45px;
+    @media all and (min-width: $tablet) {
+      margin: 0 14px;
+      font-size: 20px;
+    }
+  }
+  &--button {
+    font-family: $typoText;
+    border: none;
+    width: 184px;
+    height: 45px;
+    border-radius: 45px;
+    background-color: $colorPrincipal;
+    @media all and (min-width: $tablet) {
+      grid-column: span 3;
+      width: 210px;
+    }
+    @media all and (min-width: $desktop) {
+      width: 255px;
+    }
+    
+    // &:active, &:focus {
+    //     border-color: $colorPrincipal;
+    //     color: $colorPrincipal;
+    // }
 
-    &--title {
-        font-family: $typoTitle;
-        font-size: 24px;
-        line-height: 30px;
-        text-transform: capitalize;
-        margin-bottom: 45px;
-        @media all and (min-width: $tablet) {
-          grid-column: span 3;
-          margin-top: 30px;
-          font-size: 26px;
-          line-height: 45px;
-        }
+    &-link {
+      color: $colorWhite;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 45px;
     }
-    &--subtitle {
-        font-family: $typoTitle;
-        font-size: 18px;
-        line-height: 30px;
-        @media all and (min-width: $tablet) {
-          margin-bottom: 14px;
-          font-size: 24px;
-        }
-    }
-    &--description {
-        font-family: $typoText;
-        font-size: 18px;
-        line-height: 30px;
-        margin: 0 55px 45px;
-        @media all and (min-width: $tablet) {
-          margin: 0 14px;
-          font-size: 20px;
-        }
-    }
-    &--button {
-        font-family: $typoText;
-        border: none;
-        width: 184px;
-        height: 45px;
-        border-radius: 45px;
-        background-color: $colorPrincipal;
-        @media all and (min-width: $tablet) {
-          grid-column: span 3;
-          width: 210px;
-        }
-        // &:active, &:focus {
-        //     border-color: $colorPrincipal;
-        //     color: $colorPrincipal;
-        // }
-
-        &-link {
-            color: $colorWhite;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 40px;
-        }
-    }
+  }
 }
