@@ -9,6 +9,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media all and (min-width: $tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 45px 39px;
+        text-align: left;
+        align-items: start;
+        gap:30px;
+      }
     &__menu {
         text-transform: uppercase;
         font-size: 16px;
@@ -17,12 +25,20 @@
         &--item {
             list-style-type: none;
         }
+        @media all and (min-width: $tablet) {
+            margin-bottom: 0;
+            width: 100%;
+        }
     }
     &__copyright {
         font-size: 14px;
         line-height: 30px;
         &--highlight {
             color: $colorPrincipal
+        }
+        @media all and (min-width: $tablet) {
+            order: -1;
+            width: 100%;
         }
     }
 }
