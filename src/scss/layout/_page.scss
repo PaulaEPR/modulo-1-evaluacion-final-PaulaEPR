@@ -5,7 +5,8 @@
 .main__hero {
   width: 100%;
   height: 100vh;
-  background-image: url("../images/cover.jpg");
+  background-image: linear-gradient(to bottom, $colorWhite50, 25%, $colorBlack20), url("../images/cover.jpg");
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -32,6 +33,7 @@
     margin-bottom: 10px;
     word-spacing: 100vw;
     text-align: center;
+    text-shadow: 0 2px 3px $colorBlack20;
     @media all and (min-width: $tablet) {
       font-size: 80px;
       line-height: 106px;
@@ -40,6 +42,7 @@
     @media all and (min-width: $desktop) {
       font-size: 100px;
       line-height: 132px;
+      text-shadow: 0 2px 5px $colorBlack20;
       margin-bottom: 0;
     }
   }
@@ -58,6 +61,33 @@
   }
 }
 
+@keyframes arrow-up {
+  0% {
+    transform: translateY(-5px);
+    box-shadow: 0 -2px 4px 0 $colorPrincipal;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+    box-shadow: 0 -2px 4px 0 $colorPrincipal;
+  }
+}
+@keyframes arrow-down {
+  0% {
+    transform: translateY(5px);
+    box-shadow: 0 2px 4px 0 $colorPrincipal;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+    box-shadow: 0 2px 4px 0 $colorPrincipal;
+  }
+}
+
 .main__arrow {
   background-color: $colorWhite;
   width: 45px;
@@ -73,10 +103,18 @@
     position: relative;
     top: 2px;
   }
-  &--shadow {
+  &--down {
+    &:hover {
+      animation: arrow-down 1s infinite ease-out;
+    }
+  }
+  &--up {
     box-shadow: 0 2px 4px 0 $colorBlack50;
     position: relative;
     bottom: -50%;
+    &:hover {
+      animation: arrow-up 1s infinite ease-out;
+    }
     @media all and (min-width: $tablet) {
       grid-column: span 3;
     }
