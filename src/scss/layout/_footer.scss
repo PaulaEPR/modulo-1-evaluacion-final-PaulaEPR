@@ -5,7 +5,6 @@
   font-weight: 300;
   text-align: center;
   padding: 60px 15px 45px;
-
   @media all and (min-width: $tablet) {
     padding: 45px 39px;
     text-align: left;
@@ -40,6 +39,8 @@
     &--link {
       color: $colorWhite;
       text-decoration: none;
+      box-sizing: content-box;
+      padding: 5px;
     }
     @media all and (min-width: $tablet) {
       margin-bottom: 0;

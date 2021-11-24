@@ -20,7 +20,6 @@
   @media all and (min-width: $desktop) {
     padding: 0 39px 13px;
   }
-
   &--title,
   &--claim {
     color: $colorWhite;
@@ -87,12 +86,10 @@
 
 .main__intro {
   padding: 30px 15px 45px;
-
   @media all and (min-width: $tablet) {
     padding: 30px 39px 60px;
   }
   @media all and (min-width: $desktop) {
-    padding: 60px auto;
     display: flex;
     justify-content: center;
   }
@@ -140,29 +137,30 @@
     }
   }
   &--button {
-    border: solid 2px $colorPrincipal;
+    display: block;
     width: 76px;
     height: 45px;
+    border: solid 2px $colorPrincipal;
     border-radius: 45px;
-    background: none;
+    color: $colorPrincipal;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: center;
+    transition: border-color ease-out 0.4s, color ease-out 0.4s, box-shadow ease-in 0.2s;
     @media all and (min-width: $tablet) {
       width: 91px;
     }
     @media all and (min-width: $desktop) {
       width: 160px;
     }
-
-    // &:active, &:focus {
-    //     border-color: $colorPrincipal;
-    //     color: $colorPrincipal;
-    // }
-
-    &-link {
-      color: $colorPrincipal;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 45px;
+    &:hover {
+      border-color: $colorContrast2;
+      color: $colorContrast2;
+     }
+    &:active {
+      box-shadow: 0 2px 4px 0 $colorContrast2;
     }
   }
 }
@@ -229,12 +227,18 @@
     }
   }
   &--button {
+    display: block;
     font-family: $typoText;
-    border: none;
     width: 184px;
     height: 45px;
     border-radius: 45px;
     background-color: $colorPrincipal;
+    color: $colorWhite;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 45px;
+    transition: background-color ease-out 0.4s, box-shadow ease-in 0.2s;
     @media all and (min-width: $tablet) {
       grid-column: span 3;
       width: 210px;
@@ -242,18 +246,11 @@
     @media all and (min-width: $desktop) {
       width: 255px;
     }
-    
-    // &:active, &:focus {
-    //     border-color: $colorPrincipal;
-    //     color: $colorPrincipal;
-    // }
-
-    &-link {
-      color: $colorWhite;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 45px;
+    &:hover {
+      background-color: $colorContrast2;
+     }
+    &:active {
+      box-shadow: 0 2px 4px 0 $colorContrast2;
     }
   }
 }
