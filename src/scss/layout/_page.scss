@@ -291,3 +291,27 @@
     }
   }
 }
+
+.main__special-offer {
+  background-color: $colorPrincipal;
+  width: 100%;
+  padding: 15px 180px;
+  display: none;
+  &--title {
+    font-family: $typoTitle;
+    margin-bottom: 10px;
+    grid-column: span 2;
+  }
+  &--subtitle {
+    font-family: $typoTitle;
+  }
+  &--description {
+    font-family: $typoText;
+    padding-bottom: 15px;
+  }
+  @media all and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: 20% 1fr;
+  }
+}
