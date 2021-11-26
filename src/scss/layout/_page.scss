@@ -69,14 +69,14 @@
 
 @keyframes arrow-up {
   0% {
-    transform: translateY(-5px);
+    transform: translateY(-25px);
     box-shadow: 0 -2px 4px 0 $colorPrincipal;
   }
   50% {
-    transform: translateY(0);
+    transform: translateY(-10px);
   }
   100% {
-    transform: translateY(-5px);
+    transform: translateY(-25px);
     box-shadow: 0 -2px 4px 0 $colorPrincipal;
   }
 }
