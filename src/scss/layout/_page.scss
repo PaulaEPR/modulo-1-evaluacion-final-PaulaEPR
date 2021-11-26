@@ -5,7 +5,13 @@
 .main__hero {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to bottom, $colorWhite50, 25%, $colorBlack20), url("../images/cover.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      $colorWhite50,
+      25%,
+      $colorBlack20
+    ),
+    url("../images/cover.jpg");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,14 +115,17 @@
     }
   }
   &--up {
+    display: block;
     box-shadow: 0 2px 4px 0 $colorBlack50;
     position: relative;
-    bottom: -50%;
+    text-align: center;
+    margin: -60px auto 0;
+    transform: translateY(-50%);
     &:hover {
       animation: arrow-up 1s infinite ease-out;
     }
     @media all and (min-width: $tablet) {
-      grid-column: span 3;
+      margin: -45px auto 0;
     }
   }
 }
@@ -144,6 +153,7 @@
     color: $colorContrast1;
     font-size: 14px;
     line-height: 30px;
+    font-weight: 400;
     @media all and (min-width: $desktop) {
       font-size: 16px;
     }
@@ -185,7 +195,8 @@
     font-weight: 500;
     line-height: 45px;
     text-align: center;
-    transition: border-color ease-out 0.4s, color ease-out 0.4s, box-shadow ease-in 0.2s;
+    transition: border-color ease-out 0.4s, color ease-out 0.4s,
+      box-shadow ease-in 0.2s;
     @media all and (min-width: $tablet) {
       width: 91px;
     }
@@ -195,7 +206,7 @@
     &:hover {
       border-color: $colorContrast2;
       color: $colorContrast2;
-     }
+    }
     &:active {
       box-shadow: 0 2px 4px 0 $colorContrast2;
     }
@@ -204,7 +215,7 @@
 
 .main__purchase {
   background-color: $colorContrast0;
-  padding: 30px 15px 0;
+  padding: 30px 15px 60px;
   place-items: center;
   text-align: center;
   display: grid;
@@ -285,7 +296,7 @@
     }
     &:hover {
       background-color: $colorContrast2;
-     }
+    }
     &:active {
       box-shadow: 0 2px 4px 0 $colorContrast2;
     }
@@ -295,23 +306,43 @@
 .main__special-offer {
   background-color: $colorPrincipal;
   width: 100%;
-  padding: 15px 180px;
+  padding: 30px 39px 60px;
   display: none;
   &--title {
     font-family: $typoTitle;
+    font-size: 26px;
+    line-height: 45px;
     margin-bottom: 10px;
     grid-column: span 2;
+    @media all and (min-width: $desktop) {
+      font-size: 32px;
+    }
   }
   &--subtitle {
     font-family: $typoTitle;
+    font-size: 20px;
+    line-height: 30px;
+    @media all and (min-width: $desktop) {
+      font-size: 24px;
+    }
   }
   &--description {
     font-family: $typoText;
-    padding-bottom: 15px;
+    font-size: 20px;
+    line-height: 30px;
   }
   @media all and (min-width: $tablet) {
-    display: grid;
-    grid-template-columns: 35% 1fr;
-    grid-template-rows: 20% 1fr;
+    display: flex;
+    justify-content: center;
+  }
+  &--wrapper {
+    @media all and (min-width: $tablet) {
+      display: grid;
+      grid-template-columns: 35% 1fr;
+      grid-template-rows: 20% 1fr;
+    }
+    @media all and (min-width: $desktop) {
+      width: 730px;
+    }
   }
 }
